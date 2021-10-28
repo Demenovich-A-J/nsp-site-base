@@ -1,0 +1,62 @@
+body {
+  background: #f2f2f2;
+}
+
+section .container {
+  background: #fff;
+}
+
+.nsp-header {
+  background-color: #fff;
+  /* background-color: #f5eff3; */
+}
+
+.test {
+  background: url("../assets/NSP-navbar-background.jpg") no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.logo-partnership {
+  max-width: 180px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0 0 0 / 13%);
+  margin-right: 15px;
+  border: 1px solid #00796a;
+}
+
+#footer {
+  width: 100%;
+  background: #107f6e;
+  color: #b2ded7;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.footer-social-media {
+  background-color: #00594e;
+  padding: 17px 0;
+}
+.nsp-offer ::marker {
+  color: #bb94ad;
+}
+
+.devider-cyan {
+  border: 10px solid #013c4c;
+}
+
+.devider-cyan-green {
+  border: 10px solid #10594e;
+}
+
+.devider-lemon {
+  border: 10px solid #a7ae00;
+}
+
+.devider-till {
+  border: 10px solid #4e5a32;
+}
