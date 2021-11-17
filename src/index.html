@@ -8,7 +8,7 @@
     <title>
       НСП Продукция - путь к здоровью: Бады|Программы
       здоровья|Косметика|Акции|купить НСП - Компания NSP| Дистрибьютор компании
-      NSP Елена Деменович
+      NSP $FullName
     </title>
     <meta
       name="description"
@@ -18,7 +18,7 @@
 
     <meta
       property="og:title"
-      content="НСП Продукция - путь к здоровью: Бады|Программы здоровья|Косметика|Акции|купить НСП - Компания NSP| Дистрибьютор компании NSP Елена Деменович"
+      content="НСП Продукция - путь к здоровью: Бады|Программы здоровья|Косметика|Акции|купить НСП - Компания NSP| Дистрибьютор компании NSP $FullName"
     />
     <meta property="og:type" content="website" />
     <meta
@@ -54,28 +54,40 @@
     <meta name="msapplication-config" content="assets/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/styles.css?v=1.0" />
+    <link rel="stylesheet" href="css/styles.css?v=2.0" />
   </head>
 
   <body>
-    <header class="nsp-header d-lg-block d-none">
+    <header class="nsp-header">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-4">
+          <div
+            class="
+              col-md-4 col-sm-6
+              d-flex
+              justify-content-center justify-content-sm-start
+            "
+          >
             <img
               src="assets/logo-partner-ru.svg"
               alt=""
               class="img-fluid logo-partnership"
             />
           </div>
-          <div class="col-md-3">
-            <div class="d-flex">
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="d-flex justify-content-center justify-content-sm-start">
               <div
                 class="
                   rounded-circle
@@ -84,41 +96,97 @@
                   align-items-center
                   avatar
                 "
-              >
-                Т.Т
-              </div>
+              ></div>
               <div>
                 <span>Дистрибьютор NSP</span>
                 <br />
-                <span><b>Тест Тест</b></span>
+                <span><b>$FullName</b></span>
               </div>
             </div>
           </div>
-          <div class="col-md-5">
-            <a href="tel:+ХХХ (ХХ) ХХХ-ХХ-ХХ" class="number">+ХХХ (ХХ) ХХХ-ХХ-ХХ</a>
+          <div
+            class="
+              col-lg-5 col-md-4 col-sm-6
+              offset-sm-3 offset-md-0
+              d-flex
+              justify-content-center justify-content-sm-start
+            "
+          >
+            <div class="row">
+              <div class="col-lg-8">
+                <img src="assets/mts-logo.svg" />
+                <a href="tel:$PhoneNumber" class="number"
+                  >$PhoneNumber</a
+                >
+              </div>
+              <div class="col-lg-4 d-lg-block d-none">
+                <div class="d-flex flex-row-reverse gap-3">
+                  <a href="$InstagramUrl">
+                    <img src="assets/instagram.svg" />
+                  </a>
+                  <a href="$TelegramUrl">
+                    <img
+                      style="width: 36px; height: 36px"
+                      src="assets/telegram.svg"
+                  /></a>
+                  <a href="$ViberUrl">
+                    <img
+                      style="width: 36px; height: 36px"
+                      src="assets/viber.svg"
+                  /></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
-    <nav class="navbar sticky-top test bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">Sticky top</a>
+    <nav
+      class="
+        navbar navbar-expand-lg navbar-dark
+        sticky-top
+        nsp-main-navigation
+        bg-light
+      "
+    >
+      <div class="container justify-content-end">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav d-flex justify-content-between w-100">
+            <a class="nav-link active" aria-current="page" href="#prokompaniyu"
+              >Что такое NSP?</a
+            >
+            <a class="nav-link" href="#preimuchestva"
+              >Преимущества БАДов и косметики NSP</a
+            >
+            <a class="nav-link" href="#faq">FAQ</a>
+            <a class="nav-link" href="#contacts">Контакты</a>
+            <a class="nav-link" href="#contacts">Задать вопрос</a>
+            <a class="nav-link" href="#contacts">Оформить дисконтную карту</a>
+          </div>
+        </div>
       </div>
     </nav>
-    <section class="nsp-about">
+    <section class="nsp-promo" id="akcia">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
-            <h1>Продукция NSP <br />со скидкой 40%</h1>
+          <div class="offset-lg-1 col-lg-4">
+            <h1 class="fw-bold">Продукция NSP <br />со скидкой 40%</h1>
             <h2>И бесплатное оформление бонусной карты</h2>
             <div class="d-lg-none d-block text-center">
-              <img
-                src="assets/NSP-astragal-separate.png"
-                alt=""
-                class="img-fluid"
-              />
+              <img src="assets/NSP-detocs.png" alt="" class="img-fluid" />
             </div>
-            <ul class="nsp-offer">
+            <ul class="check-list">
               <li>
                 <span><b>Получите</b> бесплатную бонусную карту NSP</span>
               </li>
@@ -129,124 +197,318 @@
                 <span><b>Возвращайте</b> до 30% от суммы заказа бонусами</span>
               </li>
             </ul>
-            <button type="button" class="btn btn-success">
-              Оформить дисконтную карту
-            </button>
-            <p class="fw-light text-muted fs-6">
+            <div class="d-grid">
+              <button type="button" class="btn btn-teal">
+                Оформить дисконтную карту
+              </button>
+            </div>
+            <p class="fw-light text-muted text-center fs-6">
               (номер сервисного центра: для Беларуси-290)
             </p>
           </div>
           <div class="col-lg-6 d-none d-lg-block">
-            <img class="img-fluid" src="assets/NSP-astragal-separate.png" />
+            <img class="img-fluid" src="assets/NSP-detocs.png" />
           </div>
-          <div class="col-lg-12 devider-cyan mt-3">
-          </div>
+          <div class="col-lg-12 devider-cyan mt-3"></div>
         </div>
       </div>
     </section>
 
-    <section class="nsp-about-2">
+    <section class="nsp-about" id="prokompaniyu">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <img
-              class="img-fluid"
-              src="assets/NSP-updated-package-design.jpg"
-            />
+            <img class="img-fluid" src="assets/NSP-strong-imune.jpg" />
           </div>
-          <div class="col">
-            <h2>Что такое NSP?</h2>
+          <div class="col-lg-6 text-justify">
+            <h1 class="fw-bold">Что такое NSP?</h1>
             <h5>Nature’s Sunshine Products.Inc</h5>
             <p>
-              Nature’s Sunshine — международная компания, которая производит
-              фитопродукты, витаминно-минеральные комплексы, высококачественную
-              косметику Bremani Care по уходу за кожей, которая замедляет
-              процесс старения и натуральную декоративную косметику BREMANI на
-              основе уникальной формулы увлажнения кожи. Акции NSP котируются на
-              бирже
-              <a href="https://www.nasdaq.com/symbol/nsp" rel="nofollow"
-                >NASDAQ</a
-              >
-              (американская биржа, которая специализируется на акциях
-              высокотехнологичных компаний, одна из трех основных фондовых бирж
-              США). Честность и надежность Nature’s Sunshine Products
-              подтверждены временем. Компания зарегистрирована как открытое
-              акционерное общество и благополучно работает в индустрии wellness
-              (здорового образа жизни) с 1972 года. На рынке бывшего СНГ с 1999
-              года. Штаб-квартира компании находится в штате Юта (США).
-              <br />Девиз компании: ➥
-              <u
-                ><a href="#" rel="nofollow"
-                  >Качество</a
-                ></u
-              >
-              ➥
-              <u
-                ><a href="#" rel="nofollow"
-                  >Cервис</a
-                ></u
-              >
-              ➥
-              <a href="#" rel="nofollow"
-                ><u>Честность</u></a
-              >, отражен на логотипе компании NSP&nbsp; <br />
+              Nature’s Sunshine Products с 1972 года создаёт, выпускает и
+              распространяет биологически активные добавки и витамины.
             </p>
             <p>
-              <b
-                ><a href="#" rel="nofollow"
-                  >Подробнее</a
-                >...</b
-              >
+              Философия Nature’s Sunshine — это забота о здоровье людей в
+              сочетании с возможностью стабильного бизнеса.
+            </p>
+            <p>
+              NSP — одна из старейших и крупных компаний в индустрии,
+              безупречная
+              <a href="https://vimeo.com/183616110"
+                >история которой насчитывает уже 49 лет</a
+              >.
             </p>
           </div>
-          <div class="col-lg-12 devider-cyan-green mt-3">
+          <div class="col-lg-6 text-justify">
+            <p>
+              Компания NSP заслужила международное признание, владеет уникальным
+              производственным комплексом и производит широкий ассортимент
+              <b>фитопрепаратов</b> и <b>косметики</b>.
+            </p>
+            <p>
+              Начиная с 1972 года компания разработала 1200 уникальных формул
+              продуктов для здоровья. Мы поставляем продукцию более чем в 50
+              стран мира. Сегодня у нас 258 поставщиков, у которых мы заказываем
+              867 натуральных компонентов.
+            </p>
+            <p>За месяц мы производим:</p>
+            <ul class="check-list">
+              <li>70 млн капсул</li>
+              <li>20 млн таблеток</li>
+              <li>1 миллион 800 тысяч стиков.</li>
+            </ul>
+            <p>
+              Мы выпускаем 60 000 готовых продуктов в день и 1 миллион 300 тысяч
+              продуктов в месяц.
+            </p>
           </div>
+          <div class="col-lg-6">
+            <img src="assets/bremani-care.jpg" class="img-fluid" />
+          </div>
+          <div class="col-lg-12 devider-lemon mt-3"></div>
         </div>
       </div>
     </section>
 
     <section class="nsp-advantages" id="preimuchestva">
       <div class="container">
-        <h2 class="text-center">
+        <h1 class="text-center fw-bold">
           <span class="text-success">Какими преимуществами</span>
           <br />
           обладают продукты NSP?
-        </h2>
-        <div class="row">
+        </h1>
+        <div class="row align-items-center">
           <div class="col-lg-3">
             <div class="row">
-              <div class="col-lg-12">
-                <p>Cертифицированы по международным стандартам</p>
+              <div class="col-lg-12 d-flex align-items-center">
+                <div class="me-2">
+                  <img src="assets/eu_flag.png" class="image-fluid" />
+                </div>
+                <h3 class="text-break">
+                  <b>Cертифицированы по международным стандартам</b>
+                </h3>
               </div>
-              <div class="col-lg-12"><p>Созданы профессионалами</p></div>
+              <div class="col-lg-12">
+                <p class="text-justify">
+                  49 лет опыта в закупках и тестировании сырья, строгий аудит
+                  поставщиков и всех этапов производства позволяет создавать
+                  продукты, которые соответствуют нормам международных
+                  стандартов Kosher Service, GMP, NSF, WADA и других
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 d-flex align-items-center">
+                <div class="me-2">
+                  <img src="assets/winner_cup.png" class="image-fluid" />
+                </div>
+                <h3><b>Созданы профессионалами</b></h3>
+              </div>
+              <div class="col-lg-12">
+                <p class="text-justify">
+                  В разработке и тестировании продукции принимают участие врачи,
+                  кандидаты и доктора медицинских наук, нутрициологи
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <img class="img-fluid" src="assets/NSP-sience.jpg" />
+            <img class="img-fluid" src="assets/NSP-astragal-separate.png" />
           </div>
           <div class="col-lg-3">
             <div class="row">
-              <div class="col-lg-12">
-                <p>Cертифицированы по международным стандартам</p>
+              <div class="col-lg-12 d-flex align-items-center">
+                <div class="me-2">
+                  <img src="assets/nsp_pack.png" class="image-fluid" />
+                </div>
+                <h3><b>Представлены в широком ассортименте</b></h3>
               </div>
-              <div class="col-lg-12"><p>Созданы профессионалами</p></div>
+              <div class="col-lg-12">
+                <p class="text-justify">
+                  Компания NSP производит биологически активные добавки для
+                  взрослых и детей, уходовую косметику, декоративную косметику,
+                  а также средства для дома
+                </p>
+                <p>
+                  <a href="https://www.sunprod.ru/goodies.php">
+                    Скачать прайс NSP (160кb)
+                  </a>
+                </p>
+              </div>
+              <div class="col-lg-12 d-flex align-items-center">
+                <div class="me-2">
+                  <img src="assets/research.png" class="image-fluid" />
+                </div>
+                <h3><b>Проходят строгий контроль качества</b></h3>
+              </div>
+              <div class="col-lg-12">
+                <p class="text-justify">
+                  Каждая партия проходит 2 обязательных этапа контроля:
+                  микроскопический и химический. Подлинность сырья проверяется
+                  по системе HPTLC SYSTEM. Это гарантия отсутствия в продукции
+                  токсинов, тяжёлых металлов и примесей
+                </p>
+              </div>
             </div>
           </div>
-          <div class="col-lg-12 devider-lemon mt-3">
+          <div class="col-lg-12 devider-dark-lemon mt-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nsp-advantages" id="faq">
+      <div class="container">
+        <h1 class="text-center fw-bold">FAQ</h1>
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="card mb-lg-0 mb-2">
+              <div class="card-body">
+                <div class="card-title d-flex align-items-center">
+                  <h1><b>1&nbsp;</b></h1>
+                  <h5><b>Как приобрести продукцию NSP?</b></h5>
+                </div>
+                <hr class="py-1" />
+                <p class="card-text">
+                  Купить БАДы и косметику НСП можно только в специализированных
+                  магазинах <b>при наличии дисконтной карты</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="card mb-lg-0 mb-2">
+              <div class="card-body">
+                <div class="card-title d-flex align-items-center">
+                  <h1><b>2&nbsp;</b></h1>
+                  <h5><b>Какие преимущества даёт дисконтная карта?</b></h5>
+                </div>
+                <hr class="py-1" />
+                <div class="card-text">
+                  <ul class="check-list">
+                    <li>Приобретать продукцию NSP со <b>скидкой 40%</b></li>
+                    <li>Принимать участие в <b>акциях</b> компании NSP</li>
+                    <li>
+                      Получать <b>вознаграждение</b> от 5% до 30% наличными или
+                      бонусами для следующих покупок
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="card w-100">
+              <div class="card-body">
+                <div class="card-title d-flex align-items-center">
+                  <h1><b>3&nbsp;</b></h1>
+                  <h5><b>Как оформить дисконтную карту?</b></h5>
+                </div>
+                <hr class="py-1" />
+                <p class="card-text">
+                  Заполните <b>форму обратной связи</b> или свяжитесь со мной
+                  любым удобным способом
+                </p>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-teal" type="button">
+                    Оформить дисконтную карту
+                  </button>
+                </div>
+                <small class="text-muted"
+                  >Или воспользуйтесь мессенжерами</small
+                >
+                <div class="d-flex flex-row-reverse gap-3">
+                  <a href="$InstagramUrl">
+                    <img src="assets/instagram.svg" />
+                  </a>
+                  <a href="$TelegramUrl">
+                    <img
+                      style="width: 36px; height: 36px"
+                      src="assets/telegram.svg"
+                  /></a>
+                  <a href="$ViberUrl">
+                    <img
+                      style="width: 36px; height: 36px"
+                      src="assets/viber.svg"
+                  /></a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <footer id="footer">
-      <div class="container">
+      <div class="container" id="contacts">
         <div class="row">
-          <div class="col">
-            <p>Text</p>
+          <div class="col-lg-4 offset-lg-1">
+            <img class="img-fluid" src="assets/elena-nsp-3.png" />
+          </div>
+          <div class="col-lg-6 footer-contacts">
+            <h1 class="text-center">
+              <b>Дистрибьютор компании NSP </b><br /><span class=""
+                ><b>$FullName</b></span
+              >
+            </h1>
+            <h2>Контакты :</h2>
+            <div class="row">
+              <div class="col-lg-6">
+                <p class="fs-6 lh-1">
+                  <a href="tel:$PhoneNumber" class="number">
+                    <img
+                      src="assets/mts-logo.svg"
+                      style="height: 40px; width: 40px; margin-right: 5px"
+                    />
+                    $PhoneNumber</a
+                  >
+                </p>
+                <p class="fs-6 lh-1">
+                  <a href="mailto:elena-dem@tut.by" class="mail"
+                    ><img
+                      src="assets/mail.svg"
+                      style="height: 40px; width: 40px; margin-right: 5px"
+                    />elena-dem@tut.by</a
+                  >
+                </p>
+                <p class="fs-5 lh-1">
+                  Пн-Вс:&nbsp;8:00&nbsp;-&nbsp;21:00&nbsp;по&nbsp;МСК
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p class="fs-5 lh-1">
+                  Бесплатно оформите дисконтную карту и пользуйтесь продукцией
+                  NSP по минимальной Партнерской цене с накопительной скидкой от
+                  5% до 30% и акциями компании.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="container-fluid footer-social-media"></div>
+      <div class="container-fluid footer-social-media">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col">
+              <span class="copyright">&copy; 2021 NSP Premium Resller</span>
+            </div>
+            <div class="col">
+              <div class="d-flex flex-row-reverse gap-3">
+                <a href="$InstagramUrl">
+                  <img src="assets/instagram.svg" />
+                </a>
+                <a href="$TelegramUrl">
+                  <img
+                    style="width: 36px; height: 36px"
+                    src="assets/telegram.svg"
+                /></a>
+                <a href="$ViberUrl">
+                  <img style="width: 36px; height: 36px" src="assets/viber.svg"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script
