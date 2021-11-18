@@ -53,7 +53,7 @@ jobs:
         # An array of glob patterns, these files will not be included in the publish/delete process
         exclude: '*.yaml'
         # How verbose should the information be - minimal, standard, or verbose
-        log-level: verbose
+        log-level: standard
         # strict or loose
-        security: strict
+        security: loose
     
