@@ -1,0 +1,1 @@
+[![NodeJS with Grunt](https://github.com/Demenovich-A-J/nsp-site-base/actions/workflows/build-and-deploy.yml/badge.svg?branch=main)](https://github.com/Demenovich-A-J/nsp-site-base/actions/workflows/build-and-deploy.yml)
