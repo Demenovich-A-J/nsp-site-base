@@ -1,6 +1,7 @@
 name: NodeJS with Grunt
 
 on:
+  workflow_dispatch:
   push:
     branches: [ main ]
   pull_request:
