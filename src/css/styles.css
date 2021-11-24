@@ -3,6 +3,22 @@ body {
   font-family: "PT Sans", sans-serif;
 }
 
+body a {
+  color: #007f6e;
+  text-decoration: underline;
+  outline: none;
+  webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -ms-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+body a:hover {
+  color: #63a70a;
+  text-decoration: none;
+}
+
 section .container {
   background: #fff;
 }
@@ -118,18 +134,6 @@ section .container {
 }
 .nsp-promo .container {
   padding-top: 20px;
-}
-
-.nsp-about a,
-.nsp-advantages a {
-  color: #007f6e;
-  text-decoration: underline;
-  outline: none;
-  webkit-transition: all 200ms linear;
-  -moz-transition: all 200ms linear;
-  -ms-transition: all 200ms linear;
-  -o-transition: all 200ms linear;
-  transition: all 200ms linear;
 }
 
 .nsp-advantages .container,
