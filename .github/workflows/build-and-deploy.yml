@@ -13,43 +13,43 @@ jobs:
     environment: Test
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Find and Replace Full Name
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
-        include: '**/index.html'
+        include: '**/main.php'
         find: $FullName
         replace: ${{ secrets.FULL_NAME }}
         regex: false
-        
+
     - name: Find and Replace Phone Number
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
-        include: '**/index.html'
+        include: '**/main.php'
         find: $PhoneNumber
         replace: ${{ secrets.PHONE_NUMBER }}
         regex: false
-  
+
     - name: Find and Replace Email
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
-        include: '**/index.html'
+        include: '**/main.php'
         find: $Email
         replace: ${{ secrets.EMAIL }}
         regex: false
-    
+
     - name: Find and Replace Instagram Url
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
-        include: '**/index.html'
+        include: '**/main.php'
         find: $InstagramUrl
         replace: ${{ secrets.INSTAGRAM_URL }}
         regex: false
-    
+
     - name: Find and Replace Telegram Url
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
-        include: '**/index.html'
+        include: '**/main.php'
         find: $TelegramUrl
         replace: ${{ secrets.TELEGRAM_URL }}
         regex: false
@@ -57,11 +57,11 @@ jobs:
     - name: Find and Replace Viber Url
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
-        include: '**/index.html'
+        include: '**/main.php'
         find: $ViberUrl
         replace: ${{ secrets.VIBER_URL }}
         regex: false
-    
+
     - name: FTP Deploy to Fornex
       # You may pin to the exact commit or the version.
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
@@ -77,7 +77,7 @@ jobs:
         # protocol to deploy with - ftp, ftps, or ftps-legacy
         protocol: ftps
         # Folder to upload from, must end with trailing slash /
-        local-dir: 'src/'
+        local-dir: 'src/site/'
         # Path to upload to on the server. Must end with trailing slash /
         server-dir: ${{ secrets.FTP_UPLOAD_DIR }}
         # Path and name of the state file - this file is used to track which files have been deployed
@@ -94,43 +94,43 @@ jobs:
     needs: DeployToTest
     steps:
     - uses: actions/checkout@v2
-    
+
     - name: Find and Replace Full Name
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
-        include: '**/index.html'
+        include: '**/main.php'
         find: $FullName
         replace: ${{ secrets.FULL_NAME }}
         regex: false
-        
+
     - name: Find and Replace Phone Number
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
-        include: '**/index.html'
+        include: '**/main.php'
         find: $PhoneNumber
         replace: ${{ secrets.PHONE_NUMBER }}
         regex: false
-  
+
     - name: Find and Replace Email
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
-        include: '**/index.html'
+        include: '**/main.php'
         find: $Email
         replace: ${{ secrets.EMAIL }}
         regex: false
-    
+
     - name: Find and Replace Instagram Url
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
-        include: '**/index.html'
+        include: '**/main.php'
         find: $InstagramUrl
         replace: ${{ secrets.INSTAGRAM_URL }}
         regex: false
-    
+
     - name: Find and Replace Telegram Url
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
-        include: '**/index.html'
+        include: '**/main.php'
         find: $TelegramUrl
         replace: ${{ secrets.TELEGRAM_URL }}
         regex: false
@@ -138,11 +138,11 @@ jobs:
     - name: Find and Replace Viber Url
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
-        include: '**/index.html'
+        include: '**/main.php'
         find: $ViberUrl
         replace: ${{ secrets.VIBER_URL }}
         regex: false
-    
+
     - name: FTP Deploy to Fornex
       # You may pin to the exact commit or the version.
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
@@ -158,7 +158,7 @@ jobs:
         # protocol to deploy with - ftp, ftps, or ftps-legacy
         protocol: ftps
         # Folder to upload from, must end with trailing slash /
-        local-dir: 'src/'
+        local-dir: 'src/site/'
         # Path to upload to on the server. Must end with trailing slash /
         server-dir: ${{ secrets.FTP_UPLOAD_DIR }}
         # Path and name of the state file - this file is used to track which files have been deployed
@@ -168,4 +168,4 @@ jobs:
         log-level: standard
         # strict or loose
         security: loose
-    
+
