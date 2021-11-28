@@ -1,0 +1,6 @@
+{
+    "require": {
+        "dompdf/dompdf": "^1.1",
+        "paquettg/php-html-parser": "^3.1"
+    }
+}
