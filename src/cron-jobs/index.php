@@ -61,7 +61,6 @@ function GetCategories()
   $username = "root";
   $password = "";
   $dbname = "a92750_db";
-  $d = "";
 
   // Create connection
   $conn = mysqli_connect($servername, $username, $password, $dbname);
