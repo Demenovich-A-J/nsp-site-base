@@ -36,81 +36,10 @@
 </head>
 
 <body>
-    <header class="nsp-header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="
-							col-md-4 col-sm-6
-							d-flex
-							justify-content-center justify-content-sm-start
-						">
-                    <img src="public/assets/logo-partner-ru.svg" alt="" class="img-fluid logo-partnership" />
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex justify-content-center justify-content-sm-start">
-                        <div class="
-									rounded-circle
-									d-flex
-									justify-content-center
-									align-items-center
-									avatar
-								"></div>
-                        <div>
-                            <span>Дистрибьютор NSP</span>
-                            <br />
-                            <span><b>$FullName</b></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="
-							col-lg-5 col-md-4 col-sm-6
-							offset-sm-3 offset-md-0
-							d-flex d-sm-block
-							justify-content-center justify-content-sm-start
-						">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <img src="public/assets/mts-logo.svg" />
-                            <a href="tel:$PhoneNumber" class="number">$PhoneNumber</a>
-                        </div>
-                        <div class="col-lg-4 d-lg-block d-none">
-                            <div class="d-flex flex-row-reverse gap-3">
-                                <a href="$InstagramUrl">
-                                    <img src="public/assets/instagram.svg" />
-                                </a>
-                                <a href="$TelegramUrl">
-                                    <img style="width: 36px; height: 36px" src="public/assets/telegram.svg" /></a>
-                                <a href="$ViberUrl">
-                                    <img style="width: 36px; height: 36px" src="public/assets/viber.svg" /></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <nav class="
-				navbar navbar-expand-lg navbar-dark
-				sticky-top
-				nsp-main-navigation
-				bg-light
-			">
-        <div class="container justify-content-end">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav d-flex justify-content-between w-100">
-                    <a class="nav-link active" aria-current="page" href="#prokompaniyu">Что такое NSP?</a>
-                    <a class="nav-link" href="#preimuchestva">Преимущества БАДов и косметики NSP</a>
-                    <a class="nav-link" href="#faq">FAQ</a>
-                    <a class="nav-link" href="#contacts">Контакты</a>
-                    <a class="nav-link" href="#contacts">Задать вопрос</a>
-                    <a class="nav-link" href="#contacts">Оформить дисконтную карту</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php
+    include('pages/shared/header.php');
+    ?>
+
     <section class="nsp-promo" id="akcia">
         <div class="container">
             <div class="row">
@@ -353,15 +282,9 @@
                                 <a class="fw-light text-center fs-6" href="https://nsp25.com/signup.php?sid=3551064" target="_blank">➥ или заполнить форму на официальном сайте</a>
                             </div>
                             <small class="text-muted">Или воспользуйтесь мессенжерами</small>
-                            <div class="d-flex flex-row-reverse gap-3">
-                                <a href="$InstagramUrl">
-                                    <img src="public/assets/instagram.svg" />
-                                </a>
-                                <a href="$TelegramUrl">
-                                    <img style="width: 36px; height: 36px" src="public/assets/telegram.svg" /></a>
-                                <a href="$ViberUrl">
-                                    <img style="width: 36px; height: 36px" src="public/assets/viber.svg" /></a>
-                            </div>
+                            <?php
+                            include('pages/shared/social.php');
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -369,63 +292,9 @@
         </div>
     </section>
 
-    <footer id="footer">
-        <div class="container" id="contacts">
-            <div class="row">
-                <div class="col-lg-4 offset-lg-1">
-                    <img class="img-fluid" src="public/assets/elena-nsp-3.png" />
-                </div>
-                <div class="col-lg-6 footer-contacts">
-                    <h1 class="text-center">
-                        <b>Дистрибьютор компании NSP </b><br /><span class=""><b>$FullName</b></span>
-                    </h1>
-                    <h2>Контакты :</h2>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <p class="fs-6 lh-1">
-                                <a href="tel:$PhoneNumber" class="number">
-                                    <img src="public/assets/mts-logo.svg" style="height: 40px; width: 40px; margin-right: 5px" />
-                                    $PhoneNumber</a>
-                            </p>
-                            <p class="fs-6 lh-1">
-                                <a href="mailto:$Email" class="mail"><img src="public/assets/mail.svg" style="height: 40px; width: 40px; margin-right: 5px" />$Email</a>
-                            </p>
-                            <p class="fs-5 lh-1">
-                                Пн-Вс:&nbsp;8:00&nbsp;-&nbsp;21:00&nbsp;по&nbsp;МСК
-                            </p>
-                        </div>
-                        <div class="col-lg-6">
-                            <p class="fs-5 lh-1">
-                                Бесплатно оформите дисконтную карту и пользуйтесь продукцией
-                                NSP по минимальной Партнерской цене с накопительной скидкой от
-                                5% до 30% и акциями компании.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid footer-social-media">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <span class="copyright">&copy; 2021 NSP Premium Resller</span>
-                    </div>
-                    <div class="col">
-                        <div class="d-flex flex-row-reverse gap-3">
-                            <a href="$InstagramUrl">
-                                <img src="public/assets/instagram.svg" />
-                            </a>
-                            <a href="$TelegramUrl">
-                                <img style="width: 36px; height: 36px" src="public/assets/telegram.svg" /></a>
-                            <a href="$ViberUrl">
-                                <img style="width: 36px; height: 36px" src="public/assets/viber.svg" /></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php
+    include('pages/shared/footer.php');
+    ?>
 
     <!-- Modal -->
     <div class="modal fade" id="discountFormModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
