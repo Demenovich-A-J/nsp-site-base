@@ -309,27 +309,27 @@
                 <div class="modal-body">
                     <form id="discountForm" class="needs-validation" novalidate>
                         <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Фамилия и Имя: *</label>
-                            <input type="text" class="form-control" id="recipient-name" required />
+                            <label for="user-name" class="col-form-label">Фамилия и Имя: *</label>
+                            <input type="text" class="form-control" id="user-name" name="userName" required />
                             <div class="invalid-feedback">Это поле обязательное</div>
                         </div>
                         <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Страна:</label>
-                            <input type="text" class="form-control" id="recipient-name" />
+                            <label for="country-name" class="col-form-label">Страна:</label>
+                            <input type="text" class="form-control" id="country-name" name="country" />
                         </div>
                         <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Место проживания:</label>
-                            <input type="text" class="form-control" id="recipient-name" placeholder="(город, поселок)" />
+                            <label for="place-of-living" class="col-form-label">Место проживания:</label>
+                            <input type="text" class="form-control" id="place-of-living" name="address" placeholder="(город, поселок)" />
                         </div>
                         <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Телефон: *</label>
-                            <input type="text" class="form-control" id="recipient-name" required />
+                            <label for="phone-number" class="col-form-label">Телефон: *</label>
+                            <input type="text" class="form-control" id="phone-number" name="phoneNumber" required />
                             <div class="invalid-feedback">Это поле обязательное</div>
                         </div>
                         <div class="mb-3">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required />
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input" type="checkbox" value="" id="termsConfirmation" name="termsConfirmation" required />
+                                <label class="form-check-label" for="termsConfirmation">
                                     Я согласен <a href="#">с политикой конфиденциальности</a>
                                 </label>
                                 <div class="invalid-feedback">
@@ -389,6 +389,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="public/js/scripts.js"></script>
 </body>
 

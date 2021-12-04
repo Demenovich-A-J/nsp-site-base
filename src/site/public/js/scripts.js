@@ -13,9 +13,26 @@
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
+
+          form.classList.add("was-validated");
+
+          return;
         }
 
-        form.classList.add("was-validated");
+        event.preventDefault();
+
+        var data = Object.fromEntries(new FormData(event.target));
+
+        console.log(data);
+
+        axios
+          .post("/discount", data)
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
       },
       false
     );

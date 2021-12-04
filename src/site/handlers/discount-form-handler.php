@@ -1,13 +1,20 @@
 <?php
-if(isset($_POST['submit'])){
+header('Content-Type: application/json; charset=utf-8');
 
-   $name = $_POST['name'];
-   $email = $_POST['email'];
-   $age = $_POST['age'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $data = json_decode(file_get_contents("php://input"), true);
 
-   echo "name : ".$name."<br>";
-   echo "email : ".$email."<br>";
-   echo "age : ".$age;
+    $address = $data['address'];
+    $country = $data['country'];
+    $phoneNumber = $data['phoneNumber'];
+    $termsConfirmation = $data['termsConfirmation'];
+    $userName = $data['userName'];
+
+    $responseData = new stdClass();
+
+    $responseData->name = $name;
+    $responseData->age = $age;
+    $responseData->city = $email;
+
+    echo json_encode($responseData);
 }
-
-?>
