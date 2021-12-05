@@ -1,10 +1,11 @@
 <?php
 function SaveDiscountRequest($data)
 {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "a92750_db";
+    $servername = $_SERVER['DB_HOST'];
+    $username = $_SERVER['DB_USER'];
+    $password = $_SERVER['DB_PASS'];
+    $dbname = $_SERVER['DB_NAME'];
+
     // Create connection
     $link = mysqli_connect($servername, $username, $password, $dbname);
 

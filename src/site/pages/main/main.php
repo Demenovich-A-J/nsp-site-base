@@ -9,12 +9,12 @@
     <title>
         НСП Продукция - путь к здоровью: Бады|Программы
         здоровья|Косметика|Акции|купить НСП - Компания NSP| Дистрибьютор компании
-        NSP $FullName
+        NSP <?php echo $_SERVER['FULL_NAME'] ?>
     </title>
     <meta name="description" content="✓НСП ЦЕНА, ✓Каталог, ✓Накопительная скидка 5% и более, ✓купить продукцию НСП  в  Гродно ➥Заходите!" />
     <meta name="author" content="SitePoint" />
 
-    <meta property="og:title" content="НСП Продукция - путь к здоровью: Бады|Программы здоровья|Косметика|Акции|купить НСП - Компания NSP| Дистрибьютор компании NSP $FullName" />
+    <meta property="og:title" content="НСП Продукция - путь к здоровью: Бады|Программы здоровья|Косметика|Акции|купить НСП - Компания NSP| Дистрибьютор компании NSP <?php echo $_SERVER['FULL_NAME'] ?>" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="✓НСП ЦЕНА, ✓Каталог, ✓Накопительная скидка 5% и более, ✓купить продукцию НСП  в  Гродно ➥Заходите!" />
     <meta property="og:image" content="image.png" />

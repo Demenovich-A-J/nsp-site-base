@@ -20,7 +20,7 @@
                     <div>
                         <span>Дистрибьютор NSP</span>
                         <br />
-                        <span><b>$FullName</b></span>
+                        <span><b><?php echo $_SERVER['FULL_NAME'] ?></b></span>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <img src="public/assets/mts-logo.svg" />
-                        <a href="tel:$PhoneNumber" class="number">$PhoneNumber</a>
+                        <a href="tel:<?php echo $_SERVER['PHONE_NUMBER'] ?>" class="number"><?php echo $_SERVER['PHONE_NUMBER'] ?></a>
                     </div>
                     <div class="col-lg-4 d-lg-block d-none">
                         <?php

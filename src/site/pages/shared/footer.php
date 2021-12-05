@@ -6,18 +6,18 @@
             </div>
             <div class="col-lg-6 footer-contacts">
                 <h1 class="text-center">
-                    <b>Дистрибьютор компании NSP </b><br /><span class=""><b>$FullName</b></span>
+                    <b>Дистрибьютор компании NSP </b><br /><span class=""><b><?php echo $_SERVER['FULL_NAME'] ?></b></span>
                 </h1>
                 <h2>Контакты :</h2>
                 <div class="row">
                     <div class="col-lg-6">
                         <p class="fs-6 lh-1">
-                            <a href="tel:$PhoneNumber" class="number">
+                            <a href="tel:<?php echo $_SERVER['PHONE_NUMBER'] ?>" class="number">
                                 <img src="public/assets/mts-logo.svg" style="height: 40px; width: 40px; margin-right: 5px" />
-                                $PhoneNumber</a>
+                                <?php echo $_SERVER['PHONE_NUMBER'] ?></a>
                         </p>
                         <p class="fs-6 lh-1">
-                            <a href="mailto:$Email" class="mail"><img src="public/assets/mail.svg" style="height: 40px; width: 40px; margin-right: 5px" />$Email</a>
+                            <a href="mailto:<?php echo $_SERVER['EMAIL'] ?>" class="mail"><img src="public/assets/mail.svg" style="height: 40px; width: 40px; margin-right: 5px" /><?php echo $_SERVER['EMAIL'] ?></a>
                         </p>
                         <p class="fs-5 lh-1">
                             Пн-Вс:&nbsp;8:00&nbsp;-&nbsp;21:00&nbsp;по&nbsp;МСК
