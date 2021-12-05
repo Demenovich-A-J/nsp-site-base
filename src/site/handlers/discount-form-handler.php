@@ -1,17 +1,35 @@
 <?php
 require_once 'services/google-sheet-service.php';
+require_once 'services/email-service.php';
 
-function SaveDiscountRequest($data)
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    date_default_timezone_set('Europe/Moscow');
+    header('Content-Type: application/json; charset=utf-8');
+
+    $data = GetDataFromRequest();
+
+    $savedSuccessfully = SaveDiscountRequest($link, $data);
+
+    if ($savedSuccessfully) {
+        SaveDiscountRequestToGoogle(GetGoogleSheetDiscountData($data));
+        SendNewDiscountRequestEmail($data);
+    }
+} else {
+    header("Location: /");
+    exit();
+}
+
+function SaveDiscountRequest($link, $data)
 {
     $servername = $_SERVER['DB_HOST'];
     $username = $_SERVER['DB_USER'];
     $password = $_SERVER['DB_PASS'];
     $dbname = $_SERVER['DB_NAME'];
 
-    // Create connection
+    $savedSuccessfully = false;
+
     $link = mysqli_connect($servername, $username, $password, $dbname);
 
-    // Attempt insert query execution
     $sql = "INSERT INTO `discount-request`(`FullName`, `Country`, `Address`, `PhoneNumber`, `TermsConfirmed`, `RequestDate`) VALUES (?,?,?,?,?,?)";
 
     if ($stmt = mysqli_prepare($link, $sql)) {
@@ -26,26 +44,26 @@ function SaveDiscountRequest($data)
 
         if (mysqli_stmt_execute($stmt)) {
             print_r("Records inserted successfully.");
+            $savedSuccessfully = true;
         } else {
             print_r("ERROR: Could not able to execute $sql. " . mysqli_error($link));
         }
     }
 
     mysqli_close($link);
+
+    return $savedSuccessfully;
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    header('Content-Type: application/json; charset=utf-8');
-
+function GetDataFromRequest()
+{
     $data = json_decode(file_get_contents("php://input"), true);
-
-    date_default_timezone_set('Europe/Moscow');
     $data['requestDate'] = date('Y-m-d H:i:s');
 
-    SaveDiscountRequest($data);
+    return $data;
+}
 
-    SaveDiscountRequestToGoogle([$data['userName'], $data['country'], $data['address'], $data['phoneNumber'], $data['requestDate'], 'НЕ ОБРАБОТАНО']);
-} else {
-    header("Location: /");
-    exit();
+function GetGoogleSheetDiscountData($data)
+{
+    return [$data['userName'], $data['country'], $data['address'], $data['phoneNumber'], $data['requestDate'], 'НЕ ОБРАБОТАНО'];
 }
